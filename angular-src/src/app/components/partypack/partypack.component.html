@@ -1,0 +1,29 @@
+<h2 class="page-header">Party Pack Challenge Data</h2>
+<form (submit)="onDateSubmit()">
+  <div class="form-group">
+    <label>Challenge Week</label>
+    <label>
+      <input type="text" [(ngModel)]="ChallengeWeek" name="ChallengeWeek" class="form-control">
+    </label>
+  </div>
+  <input type="submit" class="btn btn-primary" value="Submit">
+</form>
+<hr>
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>FranchiseID</th>
+    <th>Quantity</th>
+    <th>Rank</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let entry of display">
+    <td>{{ entry.name }}</td>
+    <td>{{ entry.value }}</td>
+    <td>{{ entry.rank }}</td>
+  </tr>
+  </tbody>
+</table>
+

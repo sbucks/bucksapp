@@ -1,0 +1,43 @@
+<h2 class="page-header">Display Revel Data</h2>
+<form (submit)="onFidSubmit()">
+  <div class="form-group">
+    <label>Franchise ID</label>
+    <label>
+      <input type="text" [(ngModel)]="fid" name="fid" class="form-control">
+    </label>
+    <label>Date</label>
+    <label>
+      <input type="text" [(ngModel)]="date" name="date" class="form-control">
+    </label>
+  </div>
+  <input type="submit" class="btn btn-primary" value="Submit">
+</form>
+
+<hr>
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>Type</th>
+    <th>Class</th>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Quantity</th>
+    <th>Non-TaxableSales</th>
+    <th>TaxableSales</th>
+    <th>PercentTotalSales</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let entry of entriesRevel">
+    <td>{{ entry.Type }}</td>
+    <td>{{ entry.Class }}</td>
+    <td>{{ entry.Name }}</td>
+    <td>{{ entry.Category }}</td>
+    <td>{{ entry.Quantity }}</td>
+    <td>{{ entry.Non-TaxableSales }}</td>
+    <td>{{ entry.TaxableSales }}</td>
+    <td>{{ entry.PercentTotalSales }}</td>
+  </tr>
+  </tbody>
+</table>
+
