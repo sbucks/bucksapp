@@ -29,10 +29,9 @@ const Party = module.exports = mongoose.model('Revel', revelSchema, 'partyPackCh
 module.exports.getEntryByFranchiseID = function (date, fid, callback) {
   Entry.find({Date:date, FranchiseID:fid},callback);
 };
-
 module.exports.getPartyByDate = function (week, callback) {
   Party.find({
-      ChallengeWeek: 1,
+      ChallengeWeek: 2,
       $or: [{Name: /.*Party P.*/}, {Name: /.*party p.*/}]
   }, callback);
 };

@@ -11,10 +11,17 @@ const partyentries = require('./routes/partyentries');
 const config = require('./config/database');
 
 const app = express();
-const port = 3000;
+const port = process.env.port || 3000;
+
+const options = {
+    db: {native_parser: true},
+    server: {poolSize: 5},
+    user: 'bucksuser',
+    pass: 'bahamabucks'
+};
 
 //connecting to database
-mongoose.connect(config.database);
+mongoose.connect(config.database,options);
 
 //on connection
 mongoose.connection.on('connected', function () {

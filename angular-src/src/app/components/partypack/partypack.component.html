@@ -1,11 +1,17 @@
-<h2 class="page-header">Party Pack Challenge Data</h2>
+<h2 class="page-header">Party Pack Challenge Results</h2>
 <form (submit)="onDateSubmit()">
   <div class="form-group">
     <label>Challenge Week</label>
     <label>
-      <input type="text" [(ngModel)]="ChallengeWeek" name="ChallengeWeek" class="form-control">
+      <select [(ngModel)]="ChallengeWeek" name="ChallengeWeek" class="form-control">
+        <option value="1">Week 1</option>
+        <option value="2">Week 2</option>
+        <option value="3">Week 3</option>
+        <option value="4">Week 4</option>
+      </select>
     </label>
   </div>
+
   <input type="submit" class="btn btn-primary" value="Submit">
 </form>
 <hr>
