@@ -15,7 +15,7 @@ import { PartypackComponent } from './components/partypack/partypack.component';
 
 const appRoutes: Routes = [
   {path: 'display', component: DisplayComponent},
-  {path: 'partypack', component: PartypackComponent}
+  {path: '', component: PartypackComponent}
 ];
 
 @NgModule({
