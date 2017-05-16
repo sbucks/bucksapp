@@ -31,7 +31,7 @@ module.exports.getEntryByFranchiseID = function (date, fid, callback) {
 };
 module.exports.getPartyByDate = function (week, callback) {
   Party.find({
-      ChallengeWeek: 2,
+      ChallengeWeek: week,
       $or: [{Name: /.*Party P.*/}, {Name: /.*party p.*/}]
   }, callback);
 };
