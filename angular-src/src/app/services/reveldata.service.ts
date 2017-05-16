@@ -12,14 +12,14 @@ export class ReveldataService {
     const headers = new Headers();
     headers.append('Content-type', 'application/json');
     console.log('entered the Service ' + JSON.stringify(fid));
-    return this.http.post('http://localhost:3000/entries/values', JSON.stringify(fid), {headers: headers}).map(res => res.json());
+    return this.http.post('https://localhost:3000/entries/values', JSON.stringify(fid), {headers: headers}).map(res => res.json());
   }
 
   getPartyData(week) {
     const headers = new Headers();
     headers.append('Content-type', 'application/json');
     console.log('entered the Service ' + JSON.stringify(week));
-    return this.http.post('http://localhost:3000/entries/partyvalues', JSON.stringify(week), {headers: headers}).map(res => res.json());
+    return this.http.post('https://localhost:3000/entries/partyvalues', JSON.stringify(week), {headers: headers}).map(res => res.json());
   }
 
 }
