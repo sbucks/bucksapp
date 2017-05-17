@@ -18,7 +18,7 @@ export class ReveldataService {
   getPartyData(week) {
     const headers = new Headers();
     headers.append('Content-type', 'application/json');
-    console.log('entered the Service ' + week);
+    console.log('entered the Service ' + JSON.stringify(week));
     return this.http.post('entries/partyvalues',
       JSON.stringify(week), {headers: headers}).map(res => res.json()
     );

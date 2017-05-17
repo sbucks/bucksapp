@@ -38,7 +38,7 @@ export class PartypackComponent implements OnInit {
 
   onDateSubmit() {
     const week = {
-      ChallengeWeek: this.ChallengeWeek
+      ChallengeWeek: +this.ChallengeWeek
     };
     let entriesCount = [];
     this.reveldataService.getPartyData(week).subscribe(data => {
